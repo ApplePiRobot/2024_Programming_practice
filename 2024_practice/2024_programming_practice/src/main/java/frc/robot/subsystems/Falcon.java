@@ -5,12 +5,12 @@ import com.ctre.phoenix6.hardware.TalonFX;
 
 public class Falcon {
     private static Falcon instance = null;    
-    private static double FALCON_500_MAX_SPEED_RPS = 6380/1;
+    private static double FALCON_500_MAX_SPEED_RPS = 6380/60;
 
     private final TalonFX m_motor;
 
     private Falcon() {
-        m_motor = new TalonFX(1);
+        m_motor = new TalonFX(3);
     }
 
     public void setPercentOutput(double percentOutput){
